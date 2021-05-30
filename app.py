@@ -10,6 +10,10 @@ uri = os.environ.get('DATABASE_URL')
 if uri.startswith("postgres://"):
     uri=uri.replace('postgres://','postgresql:///')
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(uri,"postgresql:///auth_demo") 
+print(app.config["SQLALCHEMY_DATABASE_URI"])
+print("*****************************************"])
+print("*****************************************"])
+print("*****************************************"])
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_ECHO"] = True
 app.config["SECRET_KEY"] = os.environ.get('SECRET_KEY','secret')
