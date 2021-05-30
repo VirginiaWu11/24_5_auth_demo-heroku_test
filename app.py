@@ -17,6 +17,10 @@ print("*****************************************")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_ECHO"] = True
 app.config["SECRET_KEY"] = os.environ.get('SECRET_KEY','secret')
+print(app.config["SECRET_KEY"])
+print("*****************************************")
+print("*****************************************")
+print("*****************************************")
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
 
