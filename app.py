@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 uri = os.environ.get('DATABASE_URL',"postgresql:///auth_demo") 
 if uri.startswith("postgres://"):
-    uri=uri.replace('postgres://','postgresql:///')
+    uri=uri.replace('postgres://','postgresql://')
 app.config["SQLALCHEMY_DATABASE_URI"] = uri
 print(app.config["SQLALCHEMY_DATABASE_URI"])
 print("*****************************************")
